@@ -1,0 +1,4 @@
+UPDATE public.movies
+SET title = '{{Table2.updatedRow.title}}',
+    vote_average = '{{Table2.updatedRow.vote_average}}'
+WHERE id = {{Table2.updatedRow.id}};
