@@ -1,6 +1,6 @@
 {
   "gitSyncId": "66abc49e887cbb0d9f94080e_f9602ea9-dd26-4050-acbf-b6682dd9ca18",
-  "id": "Page1_Query3",
+  "id": "Page1_update_movies",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": false,
-    "name": "Query3",
+    "name": "update_movies",
     "pageId": "Page1",
     "userSetOnLoad": false
   }

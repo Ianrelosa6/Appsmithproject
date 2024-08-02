@@ -1,0 +1,2 @@
+DELETE FROM public.movies
+WHERE id = '{{modal_id.text}}';

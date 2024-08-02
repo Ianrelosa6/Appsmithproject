@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66abc49e887cbb0d9f94080e_de7cc195-641f-4614-a825-bcfd08ad8c0e",
-  "id": "Page1_Query2",
+  "gitSyncId": "66abc49e887cbb0d9f94080e_b2f410b8-059a-4c69-b8ba-ac127ae41248",
+  "id": "Page1_Delete_record",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"movies\";",
+      "body": "DELETE FROM public.movies\nWHERE id = '{{modal_id.text}}';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "Movie DataSource",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "Query2",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "executeOnLoad": false,
+    "name": "Delete_record",
     "pageId": "Page1",
     "userSetOnLoad": false
   }
