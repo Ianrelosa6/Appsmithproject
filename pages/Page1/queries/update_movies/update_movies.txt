@@ -1,4 +1,7 @@
 UPDATE public.movies
 SET title = '{{Table2.updatedRow.title}}',
-    vote_average = '{{Table2.updatedRow.vote_average}}'
+    vote_average = '{{Table2.updatedRow.vote_average}}',
+		vote_count = '{{Table2.updatedRow.vote_count}}',
+		status ={{Table2.updatedRow.status}},
+		release_date = {{Table2.updatedRow.release_date}}
 WHERE id = {{Table2.updatedRow.id}};

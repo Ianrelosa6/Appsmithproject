@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 26,
+  "bottomRow": 22,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -15,37 +15,29 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "3u2hjxc11o",
-  "leftColumn": 33,
+  "key": "fad8kv6yk2",
+  "leftColumn": 48,
   "minWidth": 120,
   "mobileBottomRow": 22,
   "mobileLeftColumn": 47,
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{Delete_record.run().then(() => {\n  closeModal('');\n  Select_movies.run();\n});}}",
-  "originalBottomRow": 27,
-  "originalTopRow": 23,
-  "parentId": "rws20ssnt4",
+  "parentId": "753hsm9093",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 49,
-  "text": "Yes",
-  "topRow": 22,
+  "rightColumn": 64,
+  "text": "Confirm",
+  "topRow": 18,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "xkwhog2c4m",
-  "widgetName": "btn_yes"
+  "widgetId": "4j1u7wozqk",
+  "widgetName": "Button6"
 }

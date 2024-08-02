@@ -1,11 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": true,
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 143,
+  "bottomRow": 124,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -58,8 +58,10 @@
     "keywords",
     "customColumn1"
   ],
-  "columnUpdatedAt": 1722555889296,
-  "columnWidthMap": {},
+  "columnUpdatedAt": 1722588774260,
+  "columnWidthMap": {
+    "customColumn1": 214.375
+  },
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
@@ -149,26 +151,34 @@
       "key": "primaryColumns.keywords.computedValue"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.customColumn1.borderRadius"
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
-    }
-  ],
-  "dynamicPropertyPathList": [
+    },
     {
       "key": "tableData"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.title.onSubmit"
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.vote_average.onSubmit"
+    },
+    {
+      "key": "primaryColumns.vote_count.onSubmit"
+    },
+    {
+      "key": "primaryColumns.status.onSubmit"
+    },
+    {
+      "key": "primaryColumns.release_date.onDateSelected"
     }
   ],
   "enableClientSideSearch": true,
@@ -191,8 +201,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 66,
   "needsErrorInfo": false,
-  "originalBottomRow": 143,
-  "originalTopRow": 77,
+  "originalBottomRow": 124,
+  "originalTopRow": 58,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumnId": "id",
@@ -344,7 +354,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "select",
       "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"genres\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -762,16 +772,17 @@
       "horizontalAlignment": "LEFT",
       "id": "release_date",
       "index": 5,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "release_date",
       "notation": "standard",
+      "onDateSelected": "{{update_movies.run().then(() => {\n  Select_movies.run();\n});}}",
       "originalId": "release_date",
       "sticky": "",
       "textColor": "",
@@ -898,16 +909,17 @@
       "horizontalAlignment": "LEFT",
       "id": "status",
       "index": 4,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "status",
       "notation": "standard",
+      "onSubmit": "{{update_movies.run().then(() => {\n  Select_movies.run();\n});}}",
       "originalId": "status",
       "sticky": "",
       "textColor": "",
@@ -953,7 +965,7 @@
     },
     "title": {
       "alias": "title",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -976,7 +988,7 @@
       "isVisible": true,
       "label": "title",
       "notation": "standard",
-      "onSubmit": "{{update_movies.run()}}",
+      "onSubmit": "{{update_movies.run().then(() => {\n  Select_movies.run();\n});}}",
       "originalId": "title",
       "sticky": "",
       "textColor": "",
@@ -1011,6 +1023,7 @@
       "isVisible": true,
       "label": "vote_average",
       "notation": "standard",
+      "onSubmit": "{{update_movies.run()}}",
       "originalId": "vote_average",
       "sticky": "",
       "textColor": "",
@@ -1045,6 +1058,7 @@
       "isVisible": true,
       "label": "vote_count",
       "notation": "standard",
+      "onSubmit": "{{update_movies.run()}}",
       "originalId": "vote_count",
       "sticky": "",
       "textColor": "",
@@ -1062,7 +1076,7 @@
   "showInlineEditingOptionDropdown": true,
   "tableData": "{{Select_movies.data}}",
   "textSize": "0.875rem",
-  "topRow": 77,
+  "topRow": 58,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

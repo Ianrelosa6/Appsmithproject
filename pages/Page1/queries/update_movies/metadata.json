@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.movies\nSET title = '{{Table2.updatedRow.title}}',\n    vote_average = '{{Table2.updatedRow.vote_average}}'\nWHERE id = {{Table2.updatedRow.id}};\n",
+      "body": "UPDATE public.movies\nSET title = '{{Table2.updatedRow.title}}',\n    vote_average = '{{Table2.updatedRow.vote_average}}',\n\t\tvote_count = '{{Table2.updatedRow.vote_count}}',\n\t\tstatus ={{Table2.updatedRow.status}},\n\t\trelease_date = {{Table2.updatedRow.release_date}}\nWHERE id = {{Table2.updatedRow.id}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

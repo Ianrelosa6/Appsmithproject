@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.movies (title, vote_average, vote_count, status, release_date, genres)\nVALUES (\n    '{{title.text}}',\n    CAST('{{voteaverage.text}}' AS NUMERIC),\n    CAST('{{votecount.text}}' AS INTEGER),\n    '{{status.selectedOptionValue}}',\n    '{{releasedate.selectedDate}}',\n    '{{gen.selectedOptionValues}}' \n);\n",
+      "body": "INSERT INTO public.movies (title, vote_average, vote_count, status, release_date, genres)\nVALUES (\n    '{{title.text}}',\n    CAST('{{voteaverage.text}}' AS NUMERIC),\n    CAST('{{votecount.text}}' AS INTEGER),\n    '{{status.selectedOptionValue}}',\n    '{{releasedate.selectedDate}}',\n    '{{gen.selectedOptionValues.join(', ')}}' \n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

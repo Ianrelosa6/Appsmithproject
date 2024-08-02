@@ -5,5 +5,5 @@ VALUES (
     CAST('{{votecount.text}}' AS INTEGER),
     '{{status.selectedOptionValue}}',
     '{{releasedate.selectedDate}}',
-    '{{gen.selectedOptionValues}}' 
+    '{{gen.selectedOptionValues.join(', ')}}' 
 );
