@@ -1,9 +1,9 @@
 INSERT INTO public.movies (title, vote_average, vote_count, status, release_date, genres)
 VALUES (
-    '{{title.text}}',
-    CAST('{{voteaverage.text}}' AS NUMERIC),
-    CAST('{{votecount.text}}' AS INTEGER),
-    '{{status.selectedOptionValue}}',
-    '{{releasedate.selectedDate}}',
-    '{{gen.selectedOptionValues.join(', ')}}' 
+    '{{m_title.text}}',
+    CAST('{{m_vote.text}}' AS NUMERIC),
+    CAST('{{m_votecount.text}}' AS INTEGER),
+    '{{m_status.selectedOptionValue}}',
+    '{{m_releasedate.selectedDate}}',
+    '{{m_genres.selectedOptionValues.join(', ')}}' 
 );
